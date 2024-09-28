@@ -3,12 +3,21 @@
 
 int main()
 {
-    int S , n ;
-    S = 0 ;
-    for(n=1,n<=10,n++){
-            S=S+n;
+    int somme=0, moyenne , n;
+    printf("Entrer la taille:\n");
+    scanf("%d" ,&n);
+    int tab[n];
+    printf("Entrer les elements du tableau:\n");
+    for(int i=0 ; i<n ;i++) {
+            printf("l'element %d", i+1);
+            scanf("%d" ,&tab[i]);
     }
-    printf("La somme des 10 premiers entiers positifs : %d" ,S);
-    return 0;
 
+    for(int i=0; i<5; i++){
+            somme+=tab[i];
+    }
+    moyenne= somme/5;
+    printf("La moyenne est %d:\n" ,moyenne);
+
+    return 0;
 }
